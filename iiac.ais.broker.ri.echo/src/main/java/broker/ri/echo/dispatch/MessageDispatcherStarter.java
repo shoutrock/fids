@@ -1,6 +1,6 @@
 package broker.ri.echo.dispatch;
 
-public class MessageDispatcherStater {
+public class MessageDispatcherStarter {
 	//
 	public static void main(String[] args) {
 		MessageDispatcher dispatcher = new MessageDispatcher();

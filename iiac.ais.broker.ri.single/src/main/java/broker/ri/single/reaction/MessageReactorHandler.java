@@ -26,7 +26,6 @@ public class MessageReactorHandler extends SimpleChannelInboundHandler<ByteBuf> 
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
     	//
         logger.debug("channelReadComplete(): writeAndFlushed.");
-        ctx.close();
     }
 
     @Override

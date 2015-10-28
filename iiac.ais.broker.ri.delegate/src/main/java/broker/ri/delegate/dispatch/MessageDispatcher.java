@@ -28,7 +28,7 @@ public class MessageDispatcher {
             bootstrap.channel(NioSocketChannel.class); 
             bootstrap.handler(new MessageDispatchChannelInitializer(requestMessage));
             
-            ChannelFuture future = bootstrap.connect("172.24.255.70", 12000).sync();
+            ChannelFuture future = bootstrap.connect("172.24.255.71", 12000).sync();
             future.addListener(new MessageDispatchFutureListener());
         } catch (Exception e) {
         	logger.debug("Exception occurred:" + e.getMessage());

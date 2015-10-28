@@ -33,6 +33,7 @@ public class MessageDispatchInboundHandler extends ChannelInboundHandlerAdapter 
     	logger.debug(String.format("channelActive():%s", requestStr));
     	
         ctx.writeAndFlush(Unpooled.copiedBuffer(requestStr, CharsetUtil.UTF_8)); // 서버에 전송 
+        ctx.close();
     }
 
     @Override

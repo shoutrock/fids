@@ -12,21 +12,18 @@ import io.netty.util.CharsetUtil;
 public class MessageReactorHandler extends SimpleChannelInboundHandler<ByteBuf> {
 	//
 	private static final Logger logger = LoggerFactory.getLogger(MessageReactorHandler.class);
+	private MessageDispatcher dispatcher;
 	
 	public MessageReactorHandler() {
 		//
+		dispatcher = new MessageDispatcher();
 	}
 	
-	 @Override
-	 public void channelRead0(ChannelHandlerContext ctx, ByteBuf byteBuf) {
-		 
-		 String requestStr = byteBuf.toString(CharsetUtil.UTF_8); 
-         logger.debug(String.format("Server received0:channelRead():%s ", requestStr));
-
-         if (!"EXIT".equals(requestStr)) {
-        	 MessageDispatcher dispatcher = new MessageDispatcher();
-        	 dispatcher.dispatch(requestStr);
-         }
+	@Override
+	public void channelRead0(ChannelHandlerContext ctx, ByteBuf byteBuf) {
+		String requestStr = byteBuf.toString(CharsetUtil.UTF_8); 
+        logger.debug(String.format("Server received0:channelRead():%s ", requestStr));
+        dispatcher.dispatch("RE: " + requestStr);
 	 }
 	
     @Override

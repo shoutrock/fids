@@ -1,6 +1,6 @@
 package broker.ri.single.reaction;
 
-public class MessageReactorStater {
+public class MessageReactorStarter {
 	//
 	public static void main(String[] args) {
 		//

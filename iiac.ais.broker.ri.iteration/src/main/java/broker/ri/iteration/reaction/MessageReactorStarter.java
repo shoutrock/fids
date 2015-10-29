@@ -1,4 +1,4 @@
-package broker.ri.echo.reaction;
+package broker.ri.iteration.reaction;
 
 public class MessageReactorStarter {
 	//

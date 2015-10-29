@@ -3,7 +3,7 @@
  * All rights reserved. This software is the proprietary information of
  * Incheon International Airport Corporation.
  *******************************************************************************/
-package broker.ri.echo.dispatch;
+package broker.ri.iteration.dispatch;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -16,11 +16,11 @@ public class MessageReactorHandler extends SimpleChannelInboundHandler<ByteBuf> 
 		//
 	}
 	
-	 @Override
-	 public void channelRead0(ChannelHandlerContext ctx, ByteBuf byteBuf) {
-		 String requestStr = byteBuf.toString(CharsetUtil.UTF_8); 
-        logger.debug(String.format("Server received0:channelRead():%s ", requestStr));
-	 }
+	@Override
+	public void channelRead0(ChannelHandlerContext ctx, ByteBuf byteBuf) {
+		String requestStr = byteBuf.toString(CharsetUtil.UTF_8); 
+		logger.debug(String.format("Server received0:channelRead():%s ", requestStr));
+	}
 	
     @Override
     public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {

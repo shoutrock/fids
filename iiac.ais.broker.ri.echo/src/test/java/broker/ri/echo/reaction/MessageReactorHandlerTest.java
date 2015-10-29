@@ -1,4 +1,4 @@
-package broker.ri.single.reaction;
+package broker.ri.echo.reaction;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -16,6 +16,6 @@ public class MessageReactorHandlerTest {
 		assertTrue(channel.writeInbound("RequestMessage"));
 		assertTrue(channel.finish());
 		String requestMessage = (String)channel.readInbound();
-		assertEquals("RequestMessage", requestMessage);
+		assertEquals("RequestMessage", requestMessage);;
 	}
 }

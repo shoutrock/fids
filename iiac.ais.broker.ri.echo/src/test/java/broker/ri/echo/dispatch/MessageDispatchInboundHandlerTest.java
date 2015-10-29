@@ -1,4 +1,4 @@
-package broker.ri.single.dispatch;
+package broker.ri.echo.dispatch;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -11,7 +11,6 @@ import io.netty.util.CharsetUtil;
 
 public class MessageDispatchInboundHandlerTest {
 	//
-	
 	@Test
 	public void testChannelActive() {
 		//

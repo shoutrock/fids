@@ -16,6 +16,6 @@ public class MessageReactorHandlerTest {
 		assertTrue(channel.writeInbound("RequestMessage"));
 		assertTrue(channel.finish());
 		String requestMessage = (String)channel.readInbound();
-		assertEquals("RequestMessage", requestMessage);;
+		assertEquals("RequestMessage", requestMessage);
 	}
 }

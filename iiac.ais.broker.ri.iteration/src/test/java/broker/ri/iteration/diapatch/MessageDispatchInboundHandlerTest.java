@@ -5,7 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
-import broker.ri.iteration.dispatch.MessageDispatchInboundHandler;
+import broker.ri.iteration.client.dispatch.MessageDispatchInboundHandler;
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.embedded.EmbeddedChannel;
 import io.netty.util.CharsetUtil;

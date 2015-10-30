@@ -1,4 +1,4 @@
-package broker.ri.iteration.reaction;
+package broker.ri.iteration.server.reaction;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

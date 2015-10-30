@@ -4,7 +4,8 @@ public class AdapterStarter {
 	//
 	public static void main(String[] args) {
 		//
-		Adapter adapter = new Adapter();
-		adapter.start();
+		new Adapter().start();
+		new Adapter().start();
+		new Adapter().start();
 	}
 }

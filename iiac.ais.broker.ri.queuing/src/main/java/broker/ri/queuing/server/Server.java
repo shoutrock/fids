@@ -34,8 +34,10 @@ public class Server {
 	}
 	
 	public void startAll() {
-		this.reactor.start();
+		logger.debug("============================== Server prepare. ==============================");
 		this.requestSubscriber.start();
+		logger.debug("============================== Server prepare1. ==============================");
+		this.reactor.start();
 		logger.debug("============================== Server Started. ==============================");
 	}
 

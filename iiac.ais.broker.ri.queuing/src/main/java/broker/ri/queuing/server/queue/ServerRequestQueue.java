@@ -48,6 +48,7 @@ public class ServerRequestQueue {
 		if (requestQueue.remainingCapacity() == 0) {
 			// TODO 예외발생 
 			logger.error("ServerRequestQueue is full.");
+			return;
 		}
 		
 		try {

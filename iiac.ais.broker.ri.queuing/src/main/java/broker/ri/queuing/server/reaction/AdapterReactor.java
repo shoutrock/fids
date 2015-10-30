@@ -36,7 +36,6 @@ public class AdapterReactor {
             bootstrap.childHandler(new AdapterReactorChannelInitializer());
 
             ChannelFuture f = bootstrap.bind().sync();
-            
             f.channel().closeFuture().sync();
         } catch (InterruptedException ie) {
         	logger.debug("Interrupted:" + ie.getMessage());

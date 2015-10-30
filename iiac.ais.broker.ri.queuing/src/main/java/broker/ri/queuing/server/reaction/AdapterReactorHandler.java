@@ -5,9 +5,12 @@ import org.slf4j.LoggerFactory;
 
 import broker.ri.queuing.server.Server;
 import io.netty.buffer.ByteBuf;
+import io.netty.buffer.Unpooled;
+import io.netty.channel.ChannelFutureListener;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.util.CharsetUtil;
+
 
 public class AdapterReactorHandler extends SimpleChannelInboundHandler<ByteBuf> {
 	//
@@ -25,18 +28,20 @@ public class AdapterReactorHandler extends SimpleChannelInboundHandler<ByteBuf> 
 		Server.getInstance().getRequestQueue().putRequest(requestMessage);
 		logger.debug("I put Message in RequestQueue");
 	}
-
+	
 	@Override
-	public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
-		//
-		logger.debug("channelReadComplete(): writeAndFlushed.");
-	}
+    public void channelReadComplete(ChannelHandlerContext ctx) throws Exception {
+    	//
+        ctx.writeAndFlush(Unpooled.EMPTY_BUFFER).addListener(ChannelFutureListener.CLOSE);
+    }
 
 	@Override
 	public void exceptionCaught(ChannelHandlerContext ctx, Throwable cause) {
-		//
-		logger.debug("exceptionCaught(): closed().");
 		cause.printStackTrace();
-		ctx.close();
+
+		if (ctx.channel().isActive()) {
+			ctx.writeAndFlush("ERR: " + cause.getClass().getSimpleName() + ": " + cause.getMessage() + '\n')
+					.addListener(ChannelFutureListener.CLOSE);
+		}
 	}
 }

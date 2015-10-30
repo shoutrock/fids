@@ -1,4 +1,4 @@
-package broker.ri.single.reaction;
+package broker.ri.single.server.reaction;
 
 import java.net.InetSocketAddress;
 

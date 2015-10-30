@@ -1,4 +1,4 @@
-package broker.ri.delegate.reaction;
+package broker.ri.delegate.server.reaction;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

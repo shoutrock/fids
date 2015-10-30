@@ -1,4 +1,4 @@
-package broker.ri.delegate.dispatch;
+package broker.ri.delegate.client.dispatch;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -1,4 +1,4 @@
-package broker.ri.delegate.reaction;
+package broker.ri.delegate.server.reaction;
 
 import java.net.InetSocketAddress;
 

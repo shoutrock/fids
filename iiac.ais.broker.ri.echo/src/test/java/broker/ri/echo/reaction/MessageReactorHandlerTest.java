@@ -5,6 +5,7 @@ import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
 
+import broker.ri.echo.server.reaction.MessageReactorHandler;
 import io.netty.channel.embedded.EmbeddedChannel;
 
 public class MessageReactorHandlerTest {

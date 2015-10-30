@@ -1,4 +1,4 @@
-package broker.ri.echo.reaction;
+package broker.ri.echo.server.reaction;
 
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;

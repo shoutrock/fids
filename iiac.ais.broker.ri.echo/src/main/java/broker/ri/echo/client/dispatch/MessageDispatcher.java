@@ -1,4 +1,4 @@
-package broker.ri.echo.dispatch;
+package broker.ri.echo.client.dispatch;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

@@ -20,7 +20,6 @@ public class Adapter extends Thread {
 		int index = 0;
 		while (true) {
 			if (hasSleepInterrupt()) {
-				logger.debug("Catch a interrupt signal, so I stop this thread."); 
 				break; 
 			}
 			
@@ -35,6 +34,7 @@ public class Adapter extends Thread {
 			Thread.sleep(500);
 			return false;
 		} catch (InterruptedException e) {
+		    logger.error("Catch a interrupt signal, so I stop this thread."); 
 			return true;
 		}
 	}
